@@ -1,0 +1,48 @@
+using System;
+namespace InsertionSort
+{
+    class Sort
+    {
+        static void Main(string[] args)
+        {
+            int[] arr = new int[10] { 23, 9, 85, 12, 99, 34, 60, 15, 100, 1 };
+            int n = 10;
+            int i, j, val;
+
+
+            Console.WriteLine("Insertion Sort");
+            Console.Write("Initial array is: ");
+
+
+            for (i = 0; i < n; i++)
+            {
+                Console.Write(arr[i] + " ");
+            }
+
+            // 9 23 85 12
+
+            for (i = 1; i < n; i++)
+            {
+                val = arr[i];
+
+                for (j = i - 1; j >= 0; j--)
+                {
+                    if (val < arr[j])
+                    {
+                        arr[j + 1] = arr[j];
+                        arr[j] = val;
+                    }
+                    else break;
+                }
+            }
+
+
+
+            Console.Write("\nSorted Array is: ");
+            for (i = 0; i < n; i++)
+            {
+                Console.Write(arr[i] + " ");
+            }
+        }
+    }
+}
