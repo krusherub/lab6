@@ -6,7 +6,7 @@ namespace InsertionSort
         static void Main(string[] args)
         {
             int[] arr = new int[10] { 23, 9, 85, 12, 99, 34, 60, 15, 100, 1 };
-            int n = 10;
+            int n = arr.Length;
             int i, j, val;
             Console.Write("Initial array is: ");
             for (i = 0; i < n; i++)
